@@ -1,3 +1,5 @@
+package model;
+
 // Aplicação do Pilar POO Encapsulamento
 public class Cliente {
 
@@ -10,8 +12,8 @@ public class Cliente {
     }
 
     public void comprovanteSaldoContaCliente(){
-        System.out.println("Cliente: "+nome);
-        System.out.println("Conta: "+ conta.getNumero());
+        System.out.println("model.Cliente: "+nome);
+        System.out.println("model.Conta: "+ conta.getNumero());
         System.out.println("Saldo: "+ conta.getSaldo());
     }
 

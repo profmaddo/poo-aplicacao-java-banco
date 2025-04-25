@@ -1,5 +1,7 @@
+package model;
+
 // Aplicação do Pilar POO Herança
-public class ContaCorrente extends Conta{
+public class ContaCorrente extends Conta {
 
     public ContaCorrente(String numero) {
         super(numero);

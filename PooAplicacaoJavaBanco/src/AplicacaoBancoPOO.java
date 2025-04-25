@@ -1,3 +1,7 @@
+import model.Cliente;
+import model.ContaCorrente;
+import model.ContaPoupanca;
+
 import java.util.Scanner;
 
 /**
@@ -5,10 +9,10 @@ import java.util.Scanner;
  * - Tratamento de erros
  * - Coleções tipadas, vetores, arrays
  *
- * Classe chamada Conta (abstrata)
- * Classe ContaCorrente (Herança)
- * Classe ContaPoupanca (Herança)
- * Classe Cliente (Encapsulamento) - modificadores de acesso getts e setts
+ * Classe chamada model.Conta (abstrata)
+ * Classe model.ContaCorrente (Herança)
+ * Classe model.ContaPoupanca (Herança)
+ * Classe model.Cliente (Encapsulamento) - modificadores de acesso getts e setts
  * Classe CaixaEletronico (Polimorfismo)
  * Classe Banco - Coleções, static, final, array, tratamento de erros (try catch)
  *
@@ -34,7 +38,7 @@ public class AplicacaoBancoPOO {
         Cliente maddo = new Cliente("Marco", new ContaPoupanca("002-2025-1"));
 
         // Opções (MENU - R)
-        // 1 - Conta
+        // 1 - model.Conta
         // 2 - Depósito
         // 3 - Saque
         // 4 - Ver dados da conta ou do banco
@@ -46,7 +50,7 @@ public class AplicacaoBancoPOO {
         do {
 
             System.out.println("MENU PRINCIPAL DO BANCO\n\nSelecione uma opção\n");
-            System.out.println("1 - Visualizar Saldo da Conta");
+            System.out.println("1 - Visualizar Saldo da model.Conta");
             System.out.println("2 - Efetuar um Depósito");
             System.out.println("3 - Sacar valor");
             System.out.println("4 - Ver detalhes do Banco");
@@ -60,7 +64,7 @@ public class AplicacaoBancoPOO {
             switch (opcao){
 
                 case 1:
-                    System.out.println("Opção 1 - Visualizar Saldo da Conta");
+                    System.out.println("Opção 1 - Visualizar Saldo da model.Conta");
                     marco.comprovanteSaldoContaCliente();
                     break;
                 case 2:
