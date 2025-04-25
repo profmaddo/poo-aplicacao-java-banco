@@ -1,3 +1,5 @@
+package model;
+
 // Aplicação do Pilar POO Herança
 public class ContaPoupanca extends Conta {
 

@@ -1,3 +1,5 @@
+import model.Conta;
+
 // Aplicação do Pilar POO Polimorfismo
 public class CaixaEletronico {
     public void executarTransacao(Conta conta, String operacao, double valor){

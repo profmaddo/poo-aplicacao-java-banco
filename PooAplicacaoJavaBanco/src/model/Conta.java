@@ -1,3 +1,5 @@
+package model;
+
 // Aplicação do Pilar POO Abstração
 public abstract class Conta {
 
