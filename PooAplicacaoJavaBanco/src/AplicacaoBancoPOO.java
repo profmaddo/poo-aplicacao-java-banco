@@ -8,14 +8,13 @@ import java.util.Scanner;
  * 4 Pilares da POO - Abstração, Herança, Encapsulamento e Poliforfismo
  * - Tratamento de erros
  * - Coleções tipadas, vetores, arrays
- *
+ * <p>
  * Classe chamada model.Conta (abstrata)
  * Classe model.ContaCorrente (Herança)
  * Classe model.ContaPoupanca (Herança)
  * Classe model.Cliente (Encapsulamento) - modificadores de acesso getts e setts
  * Classe CaixaEletronico (Polimorfismo)
  * Classe Banco - Coleções, static, final, array, tratamento de erros (try catch)
- *
  */
 
 public class AplicacaoBancoPOO {
@@ -34,8 +33,8 @@ public class AplicacaoBancoPOO {
         CaixaEletronico caixaEletronico = new CaixaEletronico();
 
         // Criação das contas bancárias
-        Cliente marco = new Cliente("Carlos", new ContaCorrente("001-2025-0"));
-        Cliente maddo = new Cliente("Marco", new ContaPoupanca("002-2025-1"));
+        Cliente marco = new Cliente("Marco", new ContaCorrente("001-2025-0"));
+        Cliente maddo = new Cliente("Maddo", new ContaPoupanca("002-2025-1"));
 
         // Opções (MENU - R)
         // 1 - model.Conta
@@ -54,14 +53,16 @@ public class AplicacaoBancoPOO {
             System.out.println("2 - Efetuar um Depósito");
             System.out.println("3 - Sacar valor");
             System.out.println("4 - Ver detalhes do Banco");
-            System.out.println("5 - Sair do Banco");
-            System.out.println("6 - Instruções de uso");
+            System.out.println("5 - Criar Banco de Dados");
+            System.out.println("6 - Zerar Banco de Dados");
+            System.out.println("7 - Instruções de Uso");
+            System.out.println("8 - Sair do Banco");
 
             opcao = scanner.nextInt();
 
             Cliente cliente = marco;
 
-            switch (opcao){
+            switch (opcao) {
 
                 case 1:
                     System.out.println("Opção 1 - Visualizar Saldo da model.Conta");
@@ -70,21 +71,30 @@ public class AplicacaoBancoPOO {
                 case 2:
                     System.out.println("Digite o valor do depósito: ");
                     double valorDoDeposito = scanner.nextDouble();
-                    caixaEletronico.executarTransacao(marco.getConta(),"depositar", valorDoDeposito);
-                    Banco.registrarUmaTransacao("depósito",1);
+                    caixaEletronico.executarTransacao(marco.getConta(), "depositar", valorDoDeposito);
+                    Banco.registrarUmaTransacao("depósito", 1);
                     break;
                 case 3:
                     System.out.println("Digite o valor do saque: ");
                     double valorDoSaque = scanner.nextDouble();
-                    caixaEletronico.executarTransacao(marco.getConta(),"sacar", valorDoSaque);
-                    Banco.registrarUmaTransacao("saque",2);
+                    caixaEletronico.executarTransacao(marco.getConta(), "sacar", valorDoSaque);
+                    Banco.registrarUmaTransacao("saque", 2);
 
                     break;
                 case 4:
                     Banco.imprimirDadosDoBanco();
                     break;
                 case 5:
-                    System.out.println("Opção 5 - Sair do Banco");
+                    System.out.println("5 - Criar Banco de Dados");
+                    break;
+                case 6:
+                    System.out.println("6 - Zerar Banco de Dados");
+                    break;
+                case 7:
+                    System.out.println("7 - Instruções de Uso");
+                    break;
+                case 8:
+                    System.out.println("8 - Sair do Banco");
                     System.out.println("Volte sempre!");
                     break;
                 default:
